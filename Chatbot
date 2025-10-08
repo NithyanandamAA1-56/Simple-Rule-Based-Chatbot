@@ -1,0 +1,40 @@
+def simple_chatbot():
+    """A rule-based chatbot using if-elif-else statements."""
+    print("🤖 Chatbot: Hello! I'm a simple rule-based bot. Ask me about the weather, how I am, or say goodbye!")
+    print("Type 'quit' or 'exit' to stop.")
+    print("-" * 30)
+
+    while True:
+        # Get user input and convert it to lowercase for case-insensitive matching
+        user_input = input("👤 You: ").lower()
+
+        # 1. Exit Condition
+        if user_input in ["quit", "exit", "bye", "goodbye"]:
+            print("🤖 Chatbot: Goodbye! Have a great day! 👋")
+            break
+
+        # 2. Predefined Rules (Pattern Matching with Keywords)
+
+        # Rule for Greetings
+        elif "hello" in user_input or "hi" in user_input:
+            print("🤖 Chatbot: Hi there! How can I help you today? 😊")
+
+        # Rule for Asking How the Bot Is
+        elif "how are you" in user_input or "how are u" in user_input:
+            print("🤖 Chatbot: I'm a computer program, so I don't have feelings, but I'm running perfectly! Thanks for asking! 👍")
+
+        # Rule for Weather Inquiry
+        elif "weather" in user_input:
+            # Note: A real bot would need an API to check the real weather.
+            print("🤖 Chatbot: I can't check the *actual* weather, but I predict it's a great day to learn Python! 🐍")
+
+        # Rule for Favorite Color
+        elif "favorite color" in user_input or "favourite colour" in user_input:
+            print("🤖 Chatbot: My favorite color is **electric blue**, like the glow of a screen! 💙")
+
+        # 3. Default/Fallback Response
+        else:
+            print("🤖 Chatbot: I'm sorry, I don't quite understand that. Can you rephrase or ask about the weather? 🤔")
+
+# Start the chatbot
+# simple_chatbot()
